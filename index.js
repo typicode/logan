@@ -55,7 +55,9 @@ function create(template, styles) {
         compiled = compile(template, styles),
         result = compiled.apply(this, args);
 
-    console.log(result);
+    if (!exports.silent) {
+      console.log(result);
+    }
   }
 }
 
@@ -69,6 +71,7 @@ function set(object) {
   });
 }
 
+exports.silent = false;
 exports.compile = compile;
 exports.create = create;
 exports.set = set;

@@ -84,10 +84,22 @@ console.log(info('some text'));
 
 ```javascript
 // for example, instead of writing this:
-var foo = logan.create('some long green string', 'green green green green');
+var green = logan.create('some long green string', 'green green green green');
 
 // using {} you can write
-var foo = logan.create('{some long green string}', 'green');
+var green = logan.create('{some long green string}', 'green');
+```
+
+## Configuration
+
+If you want to suppress all output, during tests for example, just set ```silent``` to ```true```.
+
+```javascript
+logan.set({'foo', ['foo', 'red']});
+logan.silent = true;
+logan.foo(); // No output
+logan.silent = false;
+logan.foo(): // will output 'foo'
 ```
 
 ## About the name

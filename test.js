@@ -33,5 +33,10 @@ logan.set({
   foo: ['foo %', 'green'],
   bar: ['bar %', 'red']
 });
+
 assert(logan.hasOwnProperty('foo'));
 assert(logan.hasOwnProperty('bar'));
+
+assert(!logan.silent)
+logan.silent = true;
+logan.create('Should not be seen', '')();
