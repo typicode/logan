@@ -95,7 +95,7 @@ var green = logan.create('{some long green string}', 'green');
 If you want to suppress all output, during tests for example, just set ```silent``` to ```true```.
 
 ```javascript
-logan.set({'foo', ['foo', 'red']});
+logan.set({'foo': ['foo', 'red']});
 logan.silent = true;
 logan.foo(); // No output
 logan.silent = false;
